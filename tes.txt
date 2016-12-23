@@ -1,0 +1,40 @@
+<div class="form-group">
+              <label for="exampleInputMarka1">Marka samochodu</label>
+              <select class="selectpicker" data-show-subtext="true" data-header="Wybierz:" style="display: none;">
+                <optgroup label="Silnik benzynowy">
+                  <option data-subtext="110 KM">1.6</option>
+                  <option data-subtext="125 KM">1.8</option>
+                </optgroup>
+                <option data-divider="true"></option>
+                <optgroup label="Silnik Diesel">
+                  <option data-subtext="110 KM">1.9 TDI</option>
+                  <option data-subtext="130 KM">1.9 TDI</option>
+                  <option data-subtext="150 KM">2.5 TDI</option>
+                </optgroup>
+               </select>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputModel1">Model samochodu</label>
+              <input type="text" class="form-control" id="exampleInputModel1" placeholder="X">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputRok1">Rok produkcji</label>
+              <input type="text" class="form-control" id="exampleInputRok1" placeholder="X">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputSilnik1">Rodzaj silnika</label>
+              <input type="text" class="form-control" id="exampleInputSilnik1" placeholder="X">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPojemnosc1">Pojemnosc silnika</label>
+              <input type="text" class="form-control" id="exampleInputPojemnosc1" placeholder="X">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputMoc1">Moc silnika w KM</label>
+              <input type="text" class="form-control" id="exampleInputMoc1" placeholder="X">
+            </div>
