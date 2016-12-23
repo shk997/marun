@@ -122,7 +122,7 @@
             </div>
 
             <div class="form-group">
-              <label for="exampleInputLogin1">Login</label>
+              <label for="exampleInputLogin1">Login12312</label>
               <input type="text" class="form-control" id="exampleInputLogin1" placeholder="Login" name="login">
             </div>
             <div class="form-group">
