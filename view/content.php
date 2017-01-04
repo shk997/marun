@@ -1,5 +1,16 @@
 <?php
-$option = isset($_GET['option']);
+$option = isset($_GET['option']) ? $_GET[
+'option'] : 'glowna'; //zwraa boolean czy istnieje tkai parametr
+/*
+if( isset($_GET['option']))
+{
+	$option = $_GET[
+'option'];
+}
+else{
+	$option = 'glowna';
+}
+*/
 $ukryc = false;
 
 switch($option){
@@ -16,6 +27,10 @@ switch($option){
 	case 'detailing':
 		$ukryc = true;
 		$view = include('detailing.php');
+	break;
+
+	case 'glowna':
+		$view = include('home.php');
 	break;
 
 	default:
