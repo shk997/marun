@@ -8,6 +8,8 @@ if($controller == '/' || $controller == '' || $controller == 'glowna'){
 }
 
 //?controller=artykuly&action=index
+include('Controller.php');
+include('../app/Database.php');
 
 
 switch($controller){
@@ -18,6 +20,7 @@ switch($controller){
 		switch($action){
 			case 'index':
 				$class->index();
+				
 			break;
 
 			case 'article_add':
@@ -26,11 +29,13 @@ switch($controller){
 
 			case 'article_store':
 				$class->article_store();
+
 			break;
 
 			case 'article_delete':
 				$id = $_GET['id'];
 				$class->article_delete($id);
+			break;
 		}
 	break;
 

@@ -10,6 +10,7 @@ class Database {
 	public function __construct(){
 		$this->link = new mysqli($this->host, $this->user, $this->pass, $this->db) or die('brak polaczenia');
 		$this->link->set_charset('utf8');
+		
 	}
 
 	public function __destruct(){
@@ -203,4 +204,3 @@ WHERE some_column=some_value
 }
 
 
-?>

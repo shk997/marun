@@ -1,6 +1,19 @@
 <section class="content">
+
       <!-- Small boxes (Stat box) -->
     <div class="row">
+    	
+    	<?php if(isset($_SESSION['komunikat'])) : ?>
+    		<div class="col-md-12">
+    			<div class="alert alert-success alert-dismissible">
+	                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	                <h4><i class="icon fa fa-check"></i> Alert!</h4>
+	                <?php echo $_SESSION['komunikat']; ?>
+              	</div>
+            </div>
+        <?php unset($_SESSION['komunikat']); endif; ?>
+    	
+
 		<div class="col-md-6">
 		    <div class="box box-warning">
 		        <div class="box-header with-border">

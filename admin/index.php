@@ -1,4 +1,7 @@
 <?php
+ob_start();
+ini_set("default_charset", "UTF-8");
+header('Content-type: text/html; charset=UTF-8');
 session_start();
 if(isset($_SESSION)) :
   $_SESSION['name'] = isset($_POST['login']) ? $_POST['login'] : $_SESSION['name'];
@@ -15,6 +18,7 @@ if(isset($_SESSION)) :
   <title>AdminLTE 2 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -172,4 +176,4 @@ if(isset($_SESSION)) :
 
 
 <?php else : header("Location: login.php"); ?>
-<?php  endif; endif; ?>
+<?php  endif; endif; ob_end_flush();?>

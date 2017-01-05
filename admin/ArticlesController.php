@@ -1,7 +1,4 @@
 <?php
-include('Controller.php');
-include('../app/Database.php');
-
 
 class ArticlesController extends Controller{
 
@@ -40,8 +37,9 @@ class ArticlesController extends Controller{
 			'content' =>mysqli_real_escape_string($db->link, $content),
 			'published_at' => date('Y-m-d H:i:s')			
 		]);
-		echo 'aaaa';
-		//return $this->redirect('http://serwis.dev:8080/admin/index.php?controller=artykuly&action=index');
+		//echo 'aaaa';
+		$_SESSION['komunikat'] = 'zapisano !';
+		return $this->redirect('http://marun.dev/admin/index.php?controller=artykuly&action=index');
 	}
 
 
@@ -65,7 +63,7 @@ class ArticlesController extends Controller{
 		$db->table = 'articles';
 		$db->delete($id);
 
-		return $this->redirect('http://serwis.dev:8080/admin/index.php?controller=artykuly&action=index');
+		return $this->redirect('http://marun.dev/admin/index.php?controller=artykuly&action=index');
 	}
 
 }
