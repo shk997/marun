@@ -11,7 +11,7 @@
 		<title>SERWIS</title>
 		<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css" media="screen">
     	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap-select.css">
-    	<link href="style.css" rel="stylesheet">
+      <link href="style.css" rel="stylesheet">
     	<link href="resources/css/responsive.css" rel="stylesheet" media="screen"> 	
     	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,latin-ext">
 		<style>
@@ -21,10 +21,7 @@
         border: 1px solid rgba(255,195,50,.4);
         padding: 10px;
       }
-   	*/ 
-
-
-  
+   	  */
     </style>
 	</head>
 <body>
@@ -57,9 +54,9 @@
                   <li><a href="#o_nas" class="kliknij">O nas</a></li>
                   <?php endif; ?>
                 <?php endif; ?>
-                <li><a href="?option=mechanika" >Mechanika</a></li>
-                <li><a href="?option=wulkanizacja" >Wulkanizacja</a></li>
-                <li><a href="?option=detailing" >Detailing</a></li>
+                <li><a href="?option=mechanika">Mechanika</a></li>
+                <li><a href="?option=wulkanizacja">Wulkanizacja</a></li>
+                <li><a href="?option=detailing">Detailing</a></li>
               </ul>
 
               <?php if(!isset($_SESSION['check'])) : ?>
@@ -79,14 +76,13 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 <input id="login-password" type="password" class="form-control" name="password" placeholder="HASŁO" required>
                               </div>
-                               <span class="help-block zly-user" style="text-align:center"> Login lub hasło jest nieprawidłowe! </span>   
+                               <span class="help-block zly-user" style="text-align:center"> Podany login lub hasło są nieprawidłowe! </span>   
                               <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-block">Zaloguj</button>
                               </div>
 
                             </form>
-                          <!-- END LOGOWANIE -->
-                         
+                          <!-- END LOGOWANIE -->                         
                       <li class="divider">                      
                       </li>
                       <li>
@@ -103,9 +99,9 @@
                       <li class="dropdown">                
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Witaj <?php echo $_SESSION['login']; ?> <span class="caret"></span></a>
                           <ul class="dropdown-menu">
-                            <li><a href="#settings" data-toggle="modal">Ustawienia konta <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                            <li><a href="?option=acc_settings">Ustawienia konta <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Realizacje <span class="badge pull-right"> 1 </span></a></li>
+                            <li><a href="?option=realizations">Realizacje <span class="badge pull-right"> 1 </span></a></li>
                             <li class="divider"></li>
                             <li><a href="app/Logout.php">Wyloguj się <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                           </ul>
@@ -131,11 +127,6 @@
             <h3>Rejestracja</h3>
         </div>
         <div class="modal-body">
-          <div class="alert alert-danger komunikat">
-            <strong>Uwaga!</strong> 
-            <span class="komunikat-info-haslo">Oba hasła nie są takie same!</span>
-            <span class="komunikat-info-user">Taki użytkownik już istnieje!</span>
-          </div>
           <form id="register1" method="POST" action="app/Register.php" >
             <div class="form-group">
               <label for="exampleInputImie1">Imię</label>
@@ -148,12 +139,16 @@
             <div class="form-group">
               <label for="exampleInputLogin1">Login</label>
               <input type="text" class="form-control" id="exampleInputLogin1" placeholder="Login" name="login" required>
-              <span class="help-block user-is">user juz taki istnieje</span>
+              <div id="reg-alert"">
+                <span class="help-block user-is">Podany login jest już zajęty!</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">E-mail</label>
               <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Adres e-mail" name="email" required>
-              <span class="help-block email-is">email juz taki istnieje</span>
+              <div id="reg-alert"">
+                <span class="help-block email-is">Podany e-mail jest już zarejestrowany!</span>
+              </div>
             </div>
             <div class="form-group">
               <label for="exampleInputTel">Telefon kontaktowy</label>
@@ -166,8 +161,9 @@
             <div class="form-group">
               <label for="exampleInputPasswordC1">Powtórz hasło</label>
               <input type="password" class="form-control" id="exampleInputPasswordC1" placeholder="Hasło" name="password2" required>
-              <span class="help-block pass-is"> hasla nie sa ze soba zgodne</span>
-
+              <div id="reg-alert"">
+                <span class="help-block pass-is">Podane hasła nie są zgodne!</span>
+              </div>
             </div>
             
         
@@ -195,11 +191,11 @@
 
 
 <div id="pass_forg" class="modal fade" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>Przypomnienie hasła</h3>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3>Przypomnienie hasła</h3>
         </div>
         <div class="modal-body">
           <form id="pass_forg1" method="POST" action="app/# " >  <!-- COŚ -->
@@ -217,7 +213,7 @@
             </div>        
           <div class="col-xs-12 text-center">
             <button type="submit" class="btn btn-success">Przypomnij hasło</button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal" >Zamknij</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Zamknij</button>
           </div>
         </form>
       </div>
@@ -225,19 +221,16 @@
   </div>
 </div>
 
-
-                                               
-<!--#### AKTUALNOSCI ###-->
-<?php echo $view; ?>                                                 
+                                             
 <!--#### STOPKA ###-->
 
   <section id="stopka">
     <div class="container">
       <footer class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <h3> Copyright 2016 &copy; Serwis</h3>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <a href="#"><img src="resources/icons/fb.png" alt="Facebook" class="img-responsive"></a>
           <a href="#"><img src="resources/icons/g+.png" alt="Google+" class="img-responsive"></a>
           <a href="#"><img src="resources/icons/tw.png" alt="Twitter" class="img-responsive"></a>
@@ -253,14 +246,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Twoje konto zostało utworzone!</h4>
       </div>
       <div class="modal-body">
-        jestes zajerejesrasfasf
+        Teraz możesz się zalogować. Przejdź do ustawień konta, aby uzupełnić dane o swoim samochodzie. Pozwoli  to na korzystanie z serwisu!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Zamknij</button>
       </div>
     </div>
   </div>
@@ -270,8 +262,8 @@
 	<!-- JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-  
   <script type="text/javascript" src="js/bootstrap-select.js"></script>
+  <script src="step.js"></script>
   <script src="js/skrypt.js"></script>
 	</body>
 </html>

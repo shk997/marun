@@ -21,7 +21,7 @@
           <p>Ilość zamówień</p>
         </div>
         <div class="icon">
-          <i class="ion ion-bag"></i>
+          <i class="fa fa-shopping-cart"></i>
         </div>
       </div>
     </div>
@@ -48,10 +48,10 @@
       <div class="small-box bg-green">
         <div class="inner">
           <h3>53<sup style="font-size: 20px">%</sup></h3>
-          <p>Zarejestrowanych użytkowników</p>
+          <p>Zarejestrowanych samochodów</p>
         </div>
         <div class="icon">
-          <i class="ion ion-stats-bars"></i>
+          <i class="fa fa-car"></i>
         </div>            
       </div>
     </div>

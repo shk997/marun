@@ -12,12 +12,6 @@ class ArticlesController extends Controller{
 		include('articles-add.php');
 	}
 
-
-
-
-
-
-
 	//pobranie parametrow z POST z formualrza ADD
 	public function article_store(){
 		$db = new Database(); 
@@ -38,22 +32,9 @@ class ArticlesController extends Controller{
 			'published_at' => date('Y-m-d H:i:s')			
 		]);
 		//echo 'aaaa';
-		$_SESSION['komunikat'] = 'zapisano !';
-		return $this->redirect('http://marun.dev/admin/index.php?controller=artykuly&action=index');
+		$_SESSION['komunikat'] = '';
+		return $this->redirect('http://serwis.dev:8080/admin/index.php?controller=artykuly&action=index');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public function article_edit(){
 
 	}
@@ -63,7 +44,7 @@ class ArticlesController extends Controller{
 		$db->table = 'articles';
 		$db->delete($id);
 
-		return $this->redirect('http://marun.dev/admin/index.php?controller=artykuly&action=index');
+		return $this->redirect('http://serwis.dev:8080/admin/index.php?controller=artykuly&action=index');
 	}
 
 }

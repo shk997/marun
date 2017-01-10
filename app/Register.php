@@ -47,7 +47,7 @@ if($pass != $pass_confirm)
 	
 	$ilosc_bledow += 1;
 	$pass_valid = false;
-	$tablica['check_pass'] = 'Hasła nie są zgodne. Spróbuj wpisać ponownie.';
+	$tablica['check_pass'] = 'Hasła nei są zgodne';
 }
 
 //jesli oba hasla sa rowne, to wykonuje nowy rekord do bazy danych

@@ -39,6 +39,7 @@ switch($controller){
 		}
 	break;
 
+
 	case 'zamowienia':
 		include('ZamowieniaController.php');
 		$class = new ZamowieniaController(); //inaczej new Model();
@@ -46,9 +47,16 @@ switch($controller){
 			case 'index':
 				$class->index();
 			break;
+		}
+	break;
 
-			case 'zamowienia_add':
-				$class->zamowienia_add();
+
+	case 'uzytkownicy':
+		include('UzytkownicyController.php');
+		$class = new UzytkownicyController(); //inaczej new Model();
+		switch($action){
+			case 'index':
+				$class->index();
 			break;
 		}
 	break;

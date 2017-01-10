@@ -29,6 +29,14 @@ switch($option){
 		$view = include('detailing.php');
 	break;
 
+	case 'acc_settings':
+		$view = include('acc_settings.php');
+	break;
+
+	case 'realizations':
+		$view = include('realizations.php');
+	break;
+
 	case 'glowna':
 		$view = include('home.php');
 	break;

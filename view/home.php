@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="item">
-      <img src="resources/images/3a.png" alt="mechanika" class="img-responsive">
+      <img src="resources/images/3a.png" alt="detailing" class="img-responsive">
       <div class="carousel-caption">
         <h1>PAKIET ZIMA</h1><h2>Zabezpiecz swoje auto przed zimowymi warunkami atmosferycznymi!</h2>
         <p>Dokładne mycie, dekantaminacja lakieru, glinkowanie oraz zabezpieczenie powłoką ceramiczną lub woskiem!</p>
@@ -59,7 +59,7 @@
             </a>
           </div>
           <div id="aktualnosci_01<?php echo $tab['id']; ?>" class="panel-collapse collapse">
-            <div class="panel-body">
+            <div id="p-b-ff" class="panel-body">
              <?php echo $tab['content']; ?>
             </div>
           </div>
@@ -86,26 +86,26 @@
       </div>    
     <div class="row">
         <div class="col-sm-4 col-md-4 col-lg-4">
-          <div class="thumbnail">
+          <div id="tile" class="thumbnail">
             <img src="resources/images/mechanika1a.png">
             <h3>MECHANIKA</h3>
-            <p>rem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
           </div>
         </div>
 
         <div class="col-sm-4 col-md-4 col-lg-4">
-          <div class="thumbnail">
+          <div id="tile" class="thumbnail">
             <img src="resources/images/wulkanizacja1a.png">
             <h3>WULKANIZACJA</h3>
-            <p>rem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
           </div>
 
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
-          <div class="thumbnail">
+          <div id="tile" class="thumbnail">
             <img src="resources/images/detailing1a.png">
             <h3>DETAILING</h3>
-            <p>rem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nec ex eu pulvinar.</p>
           </div>
         </div>
     </div>

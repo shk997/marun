@@ -51,31 +51,21 @@ if(isset($_SESSION)) :
   <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="?controller=glowna" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
+  <div class="wrapper">
+    <header class="main-header">
+      <a href="?controller=glowna" class="logo">
+        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-lg"><b>Admin</b>LTE</span>
+      </a>
     <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
-      </a>
-
-      
+      </a>      
     </nav>
   </header>
-  <!-- Left side column. contains the logo and sidebar -->
+
   <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
       <div class="user-panel">        
         <div class="container" style="color:#fff; margin-left:15px">
           <h3>ADMIN-SERWIS</h3>          
@@ -84,32 +74,20 @@ if(isset($_SESSION)) :
           <a class="btn btn-danger glyphicon glyphicon-off" style="width:180px" href="logout.php"></a> 
         </div>
       </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">GŁÓWNE MENU</li>
         <li><a href="?controller=artykuly&action=index"><i class="fa fa-book"></i> <span>Zarządzanie aktualnościami</span></a></li>
         <li><a href="?controller=zamowienia&action=index"><i class="fa fa-book"></i> <span>Zamówienia</span></a></li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Użytkownicy</span></a></li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="?controller=uzytkownicy&action=index"><i class="fa fa-book"></i> <span>Użytkownicy</span></a></li>
         <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
       </ul>
-
     </section>
-    <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-
-  <?php include('routes.php'); ?>
-
+    <div class="content-wrapper">
+      <?php include('routes.php'); ?>
+    </div>
   </div>
-    <!-- /.row (main row) -->
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.3.8
@@ -117,23 +95,14 @@ if(isset($_SESSION)) :
     <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
     reserved.
   </footer>
-
-  <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
-    <!-- Tab panes -->
   </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
+  
   <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
-
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
